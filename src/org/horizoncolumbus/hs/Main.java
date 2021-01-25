@@ -7,7 +7,6 @@ public class Main {
 
         int[] numbers = new int[5];
 
-        //int[] numbers = new int[] {1, 2, 3, 4, 5};
 
         for(int i = 0; i < 5; i++){
             numbers[i] = i + 1;
@@ -19,6 +18,16 @@ public class Main {
             sum = sum + numbers[i];
         }
 
-        System.out.println(sum);
+        for(int i = 0; i < 5; i++){
+            if(i==4){
+                System.out.println(numbers[i] + " = " + sum);
+            }
+            else{
+                System.out.print(numbers[i] + " + " );
+            }
+
+        }
+
+        //System.out.println(sum);
     }
 }
