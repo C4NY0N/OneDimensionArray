@@ -1,33 +1,32 @@
 package org.horizoncolumbus.hs;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
         // write your code here
+        Scanner myObj = new Scanner(System.in);
 
-        int[] numbers = new int[5];
+        System.out.print("Enter Array Size: ");
+
+        int ArraySize = myObj.nextInt();
+
+        int[] numbers = new int[ArraySize];
 
 
-        for(int i = 0; i < 5; i++){
-            numbers[i] = i + 1;
+        for(int i = 0; i < ArraySize; i++){
+            System.out.print("Enter Array Number: ");
+            numbers[i] = myObj.nextInt();
         }
 
         int sum = 0;
 
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < ArraySize; i++){
             sum = sum + numbers[i];
         }
 
-        for(int i = 0; i < 5; i++){
-            if(i==4){
-                System.out.println(numbers[i] + " = " + sum);
-            }
-            else{
-                System.out.print(numbers[i] + " + " );
-            }
 
-        }
-
-        //System.out.println(sum);
+        System.out.println(sum);
     }
 }
